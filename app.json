@@ -1,0 +1,36 @@
+{
+   "name": "To Cook List",
+    "description": "Your digital pantry",
+    "website": "https://to-cook-list-production.herokuapp.com/",
+    "repository": "https://github.com/Drawbotics/drawbotics-to_cook_list",
+    "logo": "https://cdn.drawbotics.com/images/logo-drawbotics.png",
+    "env": {
+      "SECRET_TOKEN": {
+        "description": "A secret key for verifying the integrity of signed cookies.",
+        "generator": "secret"
+      },
+
+      "WEB_CONCURRENCY": {
+        "description": "The number of processes to run.",
+        "value": "5"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "hobby"
+      }
+    },
+    "image": "heroku/ruby",
+    "addons": [
+      "heroku-postgresql",
+      "logentries"
+    ],
+    "environments": {
+      "test": {
+        "scripts": {
+          "test": "bundle exec rspec"
+        }
+      }
+    }
+  }

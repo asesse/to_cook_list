@@ -1,0 +1,176 @@
+inherit_from: .rubocop_todo.yml
+require: 
+  - rubocop-rspec
+  - rubocop-rails
+
+AllCops:
+    Exclude:
+        - db/**/*
+        - config/**/*
+        - lib/**/*
+        - bin/**/*
+        - spec/rails_helper.rb
+        - spec/spec_helper.rb
+        - vendor/**/*
+        - node_modules/**/*
+        - tmp/**/*
+        - coverage
+
+Bundler/OrderedGems:
+  Enabled: true
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_first_argument
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+Layout/LineLength:
+  Max: 130
+  Exclude:
+    - spec/**/*
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+RSpec/NestedGroups:
+    Max: 6
+
+RSpec/SubjectStub:
+    Enabled: false
+
+RSpec/MultipleExpectations:
+    Max: 5
+
+Layout/DefEndAlignment:
+  EnforcedStyleAlignWith: def
+  AutoCorrect: true
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+  AutoCorrect: true
+
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block 
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Enabled: true
+
+Layout/HashAlignment:
+  Enabled: true
+
+Layout/IndentationStyle:
+  EnforcedStyle: spaces
+
+Layout/IndentationWidth:
+  Width: 2
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: aligned
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+
+Layout/SpaceBeforeComma:
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+Layout/SpaceInLambdaLiteral:
+  Enabled: true
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+
+Layout/TrailingEmptyLines:
+  EnforcedStyle: final_blank_line
+
+Layout/TrailingWhitespace:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MutableConstant:
+  EnforcedStyle: literals
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  EnforcedStyle: always
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+  AutoCorrect: true
+
+Layout/ParameterAlignment:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude: 
+    - spec/**/*
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBrackets: space
+
+RSpec/FilePath:
+  SpecSuffixOnly: true
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+  # Max: 12
+
+Metrics/ClassLength:
+  Exclude:
+    - app/graphql/types/query_type.rb
+
+Style/WordArray:
+  Enabled: false
